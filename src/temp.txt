@@ -1,0 +1,78 @@
+ {
+   "team": {
+     "title": "Team Alpha",
+     "imageUrl": "https://example.com/team_image.jpg",
+     "login": "team_alpha_login",
+     "password": "team_alpha_password",
+     "email": "team_alpha@example.com"
+   },
+   "players": [
+     {
+       "name": "John",
+       "serName": "Doe",
+       "patronymic": "Michael",
+       "imageUrl": "https://example.com/john_doe_image.jpg",
+       "stack": "Java"
+     },
+     {
+       "name": "Jane",
+       "serName": "Smith",
+       "patronymic": "Emily",
+       "imageUrl": "https://example.com/jane_smith_image.jpg",
+       "stack": "Python"
+     }
+   ]
+ }
+ 
+
+ 
+ [
+    {
+        "team": {
+            "id": 6,
+            "title": "1",
+            "imageUrl": "1",
+            "login": "busters",
+            "password": "123",
+            "email": "1"
+        },
+        "players": [
+            {
+                "id": 9,
+                "name": "1",
+                "serName": null,
+                "patronymic": "1",
+                "imageUrl": "1",
+                "stack": "1"
+            }
+        ]
+    },
+    {
+        "team": {
+            "id": 7,
+            "title": "2",
+            "imageUrl": "2",
+            "login": "2",
+            "password": "2",
+            "email": "2"
+        },
+        "players": [
+            {
+                "id": 10,
+                "name": "2",
+                "serName": "2",
+                "patronymic": "2",
+                "imageUrl": "2",
+                "stack": "2"
+            },
+            {
+                "id": 11,
+                "name": "3",
+                "serName": "3",
+                "patronymic": "3",
+                "imageUrl": "3",
+                "stack": "3"
+            }
+        ]
+    }
+]

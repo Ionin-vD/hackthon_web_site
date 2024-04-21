@@ -1,0 +1,680 @@
+.div-app {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.div-main {
+  align-items: center;
+}
+
+.div-menu-navigation {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+.player-item {
+  align-items: center;
+  display: inline-block; 
+}
+.player-info {
+  margin-top: 10%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+.div-page-t {
+  margin-left: 20%;
+  width: 1200px;
+  max-width: 1500px;
+  max-height: 1100px;
+}
+
+.team-info {
+  width: 100%;
+  height: auto;
+  max-height: 1500px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-info img {
+  align-items: center;
+  width: 80%;
+  height: 80%; /* Ширина изображения занимает всю доступную ширину родительского контейнера */
+  max-height: 250px;
+  object-fit: cover; /* Обрезать изображение до квадрата */
+  border-radius: 5px;
+}
+
+.team-card {
+  width: 100%;
+  max-width: 1500px; /* Максимальная ширина блока FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Применение стилей для экранов с шириной меньше 768px */
+@media screen and (max-width: 768px) {
+  .team-card {
+    width: 80%; /* Уменьшаем ширину блока для меньших экранов */
+    flex-direction: column; /* Изменяем направление flex на вертикальное */
+    align-items: center; /* Выравниваем элементы по центру по горизонтали */
+  }
+}
+
+.team-card img {
+  border-radius: 5px;
+}
+
+.teams-list {
+  position: flex;
+  flex-wrap: wrap; /* Добавляем wrap для переноса на новую строку */
+  justify-content: space-around; /* Равномерно распределяем элементы по строкам */
+}
+
+.teams-button {
+  width: 35%;
+  /* position: absolute; */
+  display: flex;
+  max-height: 113px;
+  align-items: center;
+  margin-left: 46%;
+}
+
+.div-body {
+  width: 100%;
+  height: 70vh;
+}
+
+/* Для мобильных устройств (максимальная ширина 480px) */
+@media screen and (max-width: 480px) {
+  .player-item {
+    width: calc(
+      33.33% - 20px
+    ); /* Изменяем ширину элемента на всю ширину при узком экране */
+    margin-bottom: 10px; /* Убираем отступы между элементами */
+  }
+}
+
+/* Для планшетов (ширина от 481px до 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .player-item {
+    width: calc(
+      50% - 20px
+    ); /* Возвращаем ширину элемента обратно на 50% при планшетном размере */
+    margin: 0 10px; /* Возвращаем отступы между элементами */
+  }
+}
+
+/* Для небольших экранов (ширина от 769px до 1200px) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .player-item {
+    width: calc(
+      33.3333% - 20px
+    ); /* Уменьшаем ширину элемента на 33.3333% при разрешении от 769px до 1200px */
+    margin: 0 10px; /* Возвращаем отступы между элементами */
+  }
+}
+
+/* Для больших экранов (ширина от 1201px до 1900px) */
+@media screen and (min-width: 1201px) and (max-width: 1900px) {
+  .player-item {
+    width: calc(
+      25% - 20px
+    ); /* Уменьшаем ширину элемента на 25% при разрешении от 1201px до 1900px */
+    margin: 0 10px; /* Возвращаем отступы между элементами */
+  }
+}
+
+/* Для очень больших экранов (ширина экрана больше 1900px) */
+@media screen and (min-width: 1901px) {
+  .player-item {
+    width: calc(
+      20% - 20px
+    ); /* Уменьшаем ширину элемента на 20% для очень широких экранов (больше 1900px) */
+    margin: 0 10px; /* Возвращаем отступы между элементами */
+  }
+}
+
+.divauth {
+  /* стили для div с классом "auth" */
+  align-items: center;
+}
+
+/* Стилизация ползунка */
+.table-wrapper::-webkit-scrollbar {
+  width: 0px; /* Ширина скроллбара вебкит браузеров */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет ползунка */
+  border-radius: 4px; /* Радиус закругления ползунка */
+}
+
+/* Стилизация трека */
+.table-wrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет трека */
+}
+
+.div-app-header {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-between; /* Изменено */
+  padding-left: 45px;
+  padding-right: 45px; /* Добавлено для равномерного расстояния от краев */
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+.but-reg-button {
+  width: 60%;
+  border: 2px solid rgb(85, 100, 241); /* цвет края кнопки */
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 80px;
+  background-color: transparent; /* прозрачный фон */
+  color: rgb(85, 100, 241); /* цвет текста */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+.but-add-member-button {
+  width: 30%;
+  border: 2px solid rgb(85, 100, 241); /* цвет края кнопки */
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 150px;
+  margin-bottom: 30px;
+  margin-top: 2%;
+  background-color: transparent; /* прозрачный фон */
+  color: rgb(85, 100, 241); /* цвет текста */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+.div-first-participant {
+  width: 100%;
+  margin: 15px 0 15px 0;
+}
+
+.div-menu {
+  grid-row: 2;
+  grid-column: 1;
+  display: flex;
+  width: 300px;
+  padding-left: 15px;
+}
+
+.div-menu a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: rgb(85, 100, 241);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* добавлен переход для изменения цвета */
+  text-align: center;
+}
+
+.nav-button-prev {
+  margin-right: 350px;
+}
+
+.-div-menu a:hover {
+  background-color: #0056b3;
+}
+/*///////////////////////////авторизация */
+.div-auth {
+  width: 90%; /* Уменьшим ширину блока для лучшей адаптивности на ПК */
+  max-width: 400px; /* Максимальная ширина блока авторизации на ПК */
+  margin: 0 auto; /* Центрирование блока авторизации по горизонтали */
+  padding: 30px; /* Добавим небольшие отступы вокруг блока */
+  text-align: center; /* Выравнивание текста по центру */
+  box-sizing: border-box; /* Учтем внутренние отступы и границу при расчете ширины */
+
+  border-radius: 5%;
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.h2-auth-text {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.div-auth-button {
+  width: 90%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: rgb(85, 100, 241); /* цвет в формате RGB */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+.div-reg-team-button {
+  width: 120%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-left: -5%;
+  margin-bottom: 5%;
+  background-color: rgb(85, 100, 241); /* цвет в формате RGB */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+.auth-input {
+  width: 90%; /* Вычисляем ширину поля ввода, вычитая отступы и границу */
+  height: 40px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.auth-input:active {
+  border: 2px solid rgb(85, 100, 241);
+}
+
+.div-auth-button:hover {
+  background-color: rgb(55, 70, 211); /* изменение цвета при наведении */
+}
+.but-reg-button {
+  width: 50%;
+  border: 2px solid rgb(85, 100, 241); /* цвет края кнопки */
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  margin-left: 40%;
+  background-color: transparent; /* прозрачный фон */
+  color: rgb(85, 100, 241); /* цвет текста */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+
+.but-reg-button:hover {
+  background-color: rgba(
+    85,
+    100,
+    241,
+    0.1
+  ); /* изменение цвета фона при наведении */
+}
+
+/*///////////////////////////регистрация */
+.div-reg {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-reg-top {
+  display: flex;
+  text-align: center;
+}
+
+.div-reg .input-field {
+  width: 70%;
+  height: 15px; /* Вы можете изменить высоту по вашему усмотрению */
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.div-reg .input-field:focus {
+  border-color: blue;
+}
+
+.div-reg h3 {
+  margin-bottom: 10px;
+}
+
+.div-reg .div-participants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 50%;
+  flex-direction: row;
+  border-radius: 5%;
+  padding: 4% 3% 4% 3%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.team-reg-menu {
+  width: 50%;
+  text-align: center;
+  border-radius: 5%;
+  padding: 5% 3% 5% 3%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.div-reg .div-participant label,
+.div-reg .div-participant .input-field,
+.div-reg .div-participant textarea {
+  width: 100%;
+}
+
+.input-field-participant {
+  width: 50%;
+  height: 15px; /* Вы можете изменить высоту по вашему усмотрению */
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+/*///////////////////////////карусель */
+
+.slider-block {
+  display: flex;
+  margin: 5px;
+}
+
+.slick-track {
+  width: 500px;
+}
+
+.slick-arrow.slick-prev {
+  margin-right: 150%;
+  
+}
+
+.div-karusel {
+  position: relative;
+  margin-top: 20px;
+  max-width: 50%; /* Увеличим максимальную ширину, чтобы карусель была более широкой */
+  margin: 0 auto;
+}
+
+.div-carousel-item {
+  margin: 2% 2% 2% 9% !important; /*Увеличим отступы между карточками*/
+  width: 80% !important;
+  min-height: 250px !important;
+  max-height: 350px !important;
+  position: relative !important;
+  /* padding: 5px; */
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-item {
+  display: flex; /* Располагаем содержимое по горизонтали */
+  flex-direction: column; /* Отображаем элементы в столбец */
+  justify-content: center; /* Выравниваем содержимое по вертикали по центру */
+  align-items: center; /*Выравниваем содержимое по горизонтали по центру */
+  width: calc(
+    100% - 10px
+  ); /* Растягиваем team-item по ширине родительского блока с учетом отступов */
+  height: calc(100% - 10px);
+  margin: 5px; /* Отступы внутри team-item */
+  padding: 10px; /* Дополнительные внутренние отступы для контента внутри team-item */
+  /* background-color: #ffffff; Цвет фона */
+  /* border-radius: 10px; /* Закругление углов 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); Тень */
+}
+.team-item img {
+  align-items: center;
+  width: 80%;
+  height: 80%; /* Ширина изображения занимает всю доступную ширину родительского контейнера */
+  max-height: 250px;
+  margin-right: 9%;
+  object-fit: cover; /* Обрезать изображение до квадрата */
+  border-radius: 5px;
+}
+.team-item h2 {
+  margin-top: auto;
+  margin-right: 9%;
+}
+
+.slick-slide a {
+  text-decoration: none;
+  color: inherit; /* Наследуем цвет текста от родительского элемента */
+  cursor: inherit; /* Наследуем тип курсора от родительского элемента */
+}
+
+.team-item {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .div-carousel-item {
+    flex-basis: calc(50% - 4%);
+  }
+}
+
+@media (max-width: 480px) {
+  .div-carousel-item {
+    flex-basis: calc(100% - 4%);
+  }
+}
+
+@media (max-width: 562px) {
+  .team-item {
+    flex-basis: calc(100% - 20px);
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 774px) {
+  .carousel {
+    justify-content: flex-start;
+    transform: translateX(calc(-33.33% + 20px));
+  }
+}
+
+/* конец карусели */
+
+.auth input[type="text"],
+.auth input[type="password"] {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: border-color 0.3s ease;
+}
+
+/*для страницы личного кабинета*/
+
+
+
+/* для таблицы рейтинга */
+
+.rating-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.table-wrapper {
+  height: 300px; /* Высота таблицы */
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-header {
+  position: sticky;
+  top: 0;
+  border-radius: 5px; /* Скругляем края таблицы */
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); /* Тень для заголовка */
+  background-color: #717ef3; /*rgb(85, 100, 241, 0.2)*/
+  color: rgb(255, 255, 255);
+}
+
+.row {
+  display: flex;
+}
+
+.row > div {
+  flex: 1;
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+.row > div:nth-child(n + 2) {
+  border-left: none;
+}
+
+.row:first-child > div {
+  border-top: none;
+}
+
+.row:nth-child(even) > div {
+  background-color: rgba(85, 100, 241, 0.105); /* Цвет для четных строк */
+}
+
+.row:nth-child(odd) > div {
+  background-color: rgba(85, 100, 241, 0.05); /* Цвет для нечетных строк */
+}
+
+.table-body {
+  overflow-y: auto; /* Добавляем вертикальную прокрутку для тела таблицы */
+}
+
+.table-body > .row:last-child > div {
+  border-bottom: none; /* Убираем нижнюю границу для последней строки тела таблицы */
+}
+
+.teams-card{
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-left: 140px;
+}
+
+/*Личный кабинет авторизованного пользователя*/
+.change-data-button {
+  width: 100%;
+  border: 2px solid rgb(85, 100, 241); /* цвет края кнопки */
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  /* margin-left: 5%; */
+  background-color: transparent; /* прозрачный фон */
+  color: rgb(85, 100, 241); /* цвет текста */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease; /* добавлен переход для изменения цвета */
+}
+
+.change-data-button:hover {
+  background-color: rgba(
+    85,
+    100,
+    241,
+    0.1
+  ); /* изменение цвета фона при наведении */
+}
+
+.change-data-input {
+  width: 100%; /* Вычисляем ширину поля ввода, вычитая отступы и границу */
+  height: 40px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-color: rgb(163, 165, 168);
+}
+
+.changePerson {
+  /* width: 100%;
+  display: flex;
+  min-width: 170px;
+  margin: 0 5%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  display: none;
+  position: fixed;
+  top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Информация о командах из карусели */
+
+.table-score {
+  width: 80%; /* Ширина блока занимает 90% ширины родительского элемента */
+  max-width: 400px; /* Максимальная ширина блока */
+  margin: 0 7%; /* Выравнивание по центру */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-score h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.table-score > div > div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-score p {
+  margin-bottom: 10px;
+}
+
+.change-data-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Определение стилей для больших экранов */
+@media screen and (min-width: 768px) {
+  .row > div {
+    width: auto; /* Возвращаем ширину колонок на больших экранах */
+  }
+
+  .table-wrapper {
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку на больших экранах */
+  }
+}
+
+.div-quit-button {
+  width: 90%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin-top: 20%;
+  padding: 8px 16px;
+  background-color: rgb(85, 100, 241); /* цвет в формате RGB */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* добавлен переход для изменения цвета */
+}

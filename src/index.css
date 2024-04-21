@@ -1,0 +1,51 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  background-image: url('C:\Users\mrdog\OneDrive\Desktop\hackathon_24\hackthon\public\images\bg_hak.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; /* Запретить повторение изображения */
+  background-attachment: fixed; /* Фиксируем фоновое изображение */
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Медиа-запросы для различных размеров экрана */
+@media screen and (max-width: 576px) {
+  body {
+    background-size: cover; /* Фиксированный размер фона на мобильных устройствах */
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  body {
+    background-size: cover; /* Фиксированный размер фона на планшетах */
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1599px) {
+  body {
+    background-size: cover; /* Фиксированный размер фона на экранах шириной от 1025px до 1599px */
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 9999px) {
+  body {
+    background-size: cover; /* Фиксированный размер фона на экранах шириной более 1600px */
+  }
+}
+
+
+
+
